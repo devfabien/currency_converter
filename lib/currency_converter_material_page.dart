@@ -19,13 +19,20 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   color: Color.fromARGB(255, 255, 255, 255)),
             ),
             TextField(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                color: Colors.black,
+              ),
               decoration: InputDecoration(
                 hintText: 'Please enter the amount in USD',
-                hintStyle: TextStyle(color: Colors.white30),
-                labelText: "Enter amount in USD",
-                // labelStyle: TextStyle(color: Colors.white),
-                // border: OutlineInputBorder(),
+                hintStyle: TextStyle(
+                  color: Colors.black26,
+                ),
+                prefixIcon: Icon(
+                  Icons.monetization_on_outlined,
+                ),
+                prefixIconColor: Colors.black,
+                filled: true,
+                fillColor: Colors.white,
               ),
             ),
           ],
