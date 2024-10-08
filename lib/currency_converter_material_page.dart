@@ -13,7 +13,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       ),
       borderRadius: BorderRadius.all(Radius.circular(10)),
     );
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
@@ -41,7 +41,13 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                 prefixIconColor: Colors.black,
                 filled: true,
                 fillColor: Colors.white,
-                focusedBorder: border,
+                focusedBorder: border.copyWith(
+                  borderSide: const BorderSide(
+                    color: Colors.blue,
+                    width: 2.0,
+                    style: BorderStyle.solid,
+                  ),
+                ),
                 enabledBorder: border,
               ),
               keyboardType: TextInputType.number,
