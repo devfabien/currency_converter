@@ -1,11 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+// 1. create a variable that stores the converted currency value
+// 2. create a function that multiplies the valie given by the textfield 1365
+// 3. store the value in the variable created in step 1
+// 4. display the value in the text widget
+
 class CurrencyConverterMaterialPage extends StatelessWidget {
   const CurrencyConverterMaterialPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double result = 0;
+    final TextEditingController textEditingController = TextEditingController();
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.black,
@@ -16,13 +23,22 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
     );
     return Scaffold(
       backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        title: const Text(
+          'Currency Converter',
+          style: TextStyle(
+              color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "0",
-              style: TextStyle(
+            Text(
+              '${result.toString()} frw',
+              style: const TextStyle(
                   fontSize: 46,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 255, 255, 255)),
@@ -30,6 +46,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                controller: textEditingController,
                 style: const TextStyle(
                   color: Colors.black,
                 ),
@@ -62,9 +79,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                 onPressed: () {
-                  if (kDebugMode) {
-                    print('Button Clicked');
-                  }
+                  result = double.parse(textEditingController.text) * 21;
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
