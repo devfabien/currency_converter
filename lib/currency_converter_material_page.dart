@@ -50,7 +50,9 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                 ),
                 enabledBorder: border,
               ),
-              keyboardType: TextInputType.number,
+              keyboardType: const TextInputType.numberWithOptions(
+                decimal: true,
+              ),
             ),
           ],
         ),
