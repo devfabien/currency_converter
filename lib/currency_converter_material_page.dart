@@ -5,13 +5,21 @@ import 'package:flutter/material.dart';
 // 3. store the value in the variable created in step 1
 // 4. display the value in the text widget
 
-class CurrencyConverterMaterialPage extends StatelessWidget {
+class CurrencyConverterMaterialPage extends StatefulWidget {
   const CurrencyConverterMaterialPage({super.key});
 
   @override
+  State<CurrencyConverterMaterialPage> createState() =>
+      _CurrencyConverterMaterialPageState();
+}
+
+class _CurrencyConverterMaterialPageState
+    extends State<CurrencyConverterMaterialPage> {
+  double result = 0;
+  final TextEditingController textEditingController = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
-    double result = 0;
-    final TextEditingController textEditingController = TextEditingController();
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.black,
@@ -27,7 +35,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
         title: const Text(
           'Currency Converter',
           style: TextStyle(
-              color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+              color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
@@ -78,7 +86,8 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                 onPressed: () {
-                  result = double.parse(textEditingController.text) * 21;
+                  result = double.parse(textEditingController.text) * 1365;
+                  setState(() {});
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
