@@ -18,6 +18,11 @@ class _CurrencyConverterMaterialPageState
   double result = 0;
   final TextEditingController textEditingController = TextEditingController();
 
+  void convertCurrency() {
+    result = double.parse(textEditingController.text) * 1365;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
@@ -44,7 +49,7 @@ class _CurrencyConverterMaterialPageState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '${result.toString()} frw',
+              '$result frw',
               style: const TextStyle(
                   fontSize: 46,
                   fontWeight: FontWeight.bold,
@@ -85,10 +90,7 @@ class _CurrencyConverterMaterialPageState
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
-                onPressed: () {
-                  result = double.parse(textEditingController.text) * 1365;
-                  setState(() {});
-                },
+                onPressed: convertCurrency,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
