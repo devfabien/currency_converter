@@ -29,9 +29,9 @@ class _CurrencyConverterMaterialPageState
       borderRadius: BorderRadius.all(Radius.circular(10)),
     );
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.white,
         title: const Text(
           'Currency Converter',
           style: TextStyle(
@@ -48,7 +48,7 @@ class _CurrencyConverterMaterialPageState
               style: const TextStyle(
                   fontSize: 46,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 255, 255, 255)),
+                  color: Color.fromARGB(255, 0, 0, 0)),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
