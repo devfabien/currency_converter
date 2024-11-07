@@ -45,19 +45,19 @@ class _CurrencyConverterMaterialPageState
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '$result frw',
-              style: const TextStyle(
-                  fontSize: 46,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 0, 0, 0)),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$result frw',
+                style: const TextStyle(
+                    fontSize: 46,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 0, 0, 0)),
+              ),
+              TextField(
                 controller: textEditingController,
                 style: const TextStyle(
                   color: Colors.black,
@@ -86,10 +86,8 @@ class _CurrencyConverterMaterialPageState
                   decimal: true,
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextButton(
+              const SizedBox(height: 10),
+              TextButton(
                 onPressed: convertCurrency,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
@@ -100,9 +98,9 @@ class _CurrencyConverterMaterialPageState
                   ),
                 ),
                 child: const Text('Convert'),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
