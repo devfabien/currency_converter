@@ -51,7 +51,7 @@ class _CurrencyConverterMaterialPageState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '$result frw',
+                '${result != 0 ? result.toStringAsFixed(2) : 0} frw',
                 style: const TextStyle(
                     fontSize: 46,
                     fontWeight: FontWeight.bold,
