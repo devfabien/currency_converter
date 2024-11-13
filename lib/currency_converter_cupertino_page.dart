@@ -50,6 +50,7 @@ class _CurrencyConverterCupertinoPageState
                 style: const TextStyle(
                   color: CupertinoColors.black,
                 ),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: CupertinoColors.white,
                   border: Border.all(),
@@ -58,6 +59,7 @@ class _CurrencyConverterCupertinoPageState
                 placeholder: 'Please enter the amount in USD',
                 prefix: const Icon(
                   CupertinoIcons.money_dollar,
+                  color: CupertinoColors.systemGrey,
                 ),
                 // decoration: InputDecoration(
                 //   hintText: 'Please enter the amountt in USD',
