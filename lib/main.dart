@@ -12,7 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: CurrencyConverterMaterialPage());
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: CurrencyConverterMaterialPage(),
+    );
   }
 }
 
@@ -22,6 +25,7 @@ class MyCupertinoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
+      debugShowCheckedModeBanner: false,
       home: CurrencyConverterCupertinoPage(),
     );
   }
